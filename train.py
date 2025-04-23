@@ -198,6 +198,8 @@ def main():
     parser.add_argument('--macro_f1', default=False,type=bool)
     opt = parser.parse_args()
 
+
+    from models.CMGCN import CMGCN
     model_classes = {
         'CMGCN':CMGCN,
     }
