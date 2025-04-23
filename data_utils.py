@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 
-from pytorch_pretrained import BertTokenizer
+from transformers import BertModel, BertTokenizer
 import spacy
 
 sp_nlp = spacy.load('en_core_web_sm')

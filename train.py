@@ -7,7 +7,7 @@ import random
 import numpy
 from sklearn import metrics
 from time import strftime, localtime
-from pytorch_pretrained import BertModel
+from transformers import BertModel, BertTokenizer
 import torch
 import torch.nn as nn
 from data_utils import  Tokenizer4Bert, Dataset
