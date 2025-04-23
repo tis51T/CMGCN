@@ -196,10 +196,15 @@ def main():
     parser.add_argument('--pre', default="",type=str)
     parser.add_argument('--model_path', default="",type=str)
     parser.add_argument('--macro_f1', default=False,type=bool)
+
+    # additional arguments
+    parser.add_argument('--hidden_dim', default=512, type=int, help='Hidden dimension size used in GCN layers')
+    parser.add_argument('--bert_dim', default=768, type=int, help='BERT hidden dimension size (usually 768 for bert-base)')
+
     opt = parser.parse_args()
 
 
-    from models.CMGCN import CMGCN
+    from models.CMGCN import CMGCN # additional import for CMGCN model
     model_classes = {
         'CMGCN':CMGCN,
     }
